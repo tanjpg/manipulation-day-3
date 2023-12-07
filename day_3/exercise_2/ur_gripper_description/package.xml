@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ur_gripper_description</name>
+  <version>2.2.15</version>
+  <description>Moveit2 Setup for UR and Robotiq Gripper</description>
+  <maintainer email="glenn_tan@artc.a-star.edu.sg">Glenn Tan</maintainer>
+
+  <license>Apache 2.0</license>
+  <author email="glenn_tan@artc.a-star.edu.sg">Glenn Tan</author>
+  <exec_depend>xacro</exec_depend>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

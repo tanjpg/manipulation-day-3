@@ -1,0 +1,10 @@
+<?xml version="1.0" ?> 
+<robot name="ur_demo" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find robotiq_85_description)/urdf/spawn_gripper.xacro"/>
+  <xacro:include filename="$(find ur_demo_description)/urdf/spawn_ur_robot.xacro"/>
+
+  <link name="world"/>
+
+</robot>
+

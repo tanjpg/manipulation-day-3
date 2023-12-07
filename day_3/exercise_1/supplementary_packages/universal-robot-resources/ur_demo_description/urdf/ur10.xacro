@@ -1,0 +1,12 @@
+<?xml version="1.0" ?> 
+<robot name="ur_demo" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find ur_demo_description)/urdf/spawn_ur_robot.xacro"/>
+
+  <link name="world"/>
+  <xacro:spawn_ur_robot parent="world" description_package="ur_description" ur_type="ur10">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  </xacro:spawn_ur_robot>
+
+</robot>
+

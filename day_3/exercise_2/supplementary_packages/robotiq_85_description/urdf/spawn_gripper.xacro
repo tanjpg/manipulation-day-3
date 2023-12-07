@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="robotiq_gripper">
+  <xacro:macro name="robotiq_gripper" params="parent prefix end_effector *origin">
+
+    <xacro:include filename="$(find robotiq_85_description)/urdf/ur_to_robotiq_adapter.urdf.xacro"/>
+    <xacro:ur_to_robotiq prefix="${prefix}" connected_to="${parent}" >
+    </xacro:ur_to_robotiq>
+
+    <xacro:if value="${end_effector == 'robotiq_epick'}">
+      <xacro:include filename="$(find robotiq_epick_description)/urdf/robotiq_epick_model.urdf.xacro"/>
+      <xacro:epick prefix="${prefix}" parent="${prefix}gripper_mount_link" robot_name="${prefix}">
+        <xacro:insert_block name="origin" />
+      </xacro:epick>
+    </xacro:if>
+
+    <xacro:if value="${end_effector == 'robotiq_2f'}">
+      <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_gripper.urdf.xacro" />
+      <xacro:robotiq_85_gripper prefix="" parent="${prefix}gripper_mount_link">
+        <xacro:insert_block name="origin" />
+      </xacro:robotiq_85_gripper>
+    </xacro:if>
+  </xacro:macro>  
+</robot>

@@ -1,0 +1,7 @@
+robotiq_ros2_server:
+  ros__parameters:
+    trajectory_topic: "/gripper_controller/joint_trajectory"
+    client_request_service: "/gripper_service"
+    robotiq_85_joint: "gripper_finger1_joint"
+    robotiq_140_joint: "left_inner_finger_pad_joint"
+

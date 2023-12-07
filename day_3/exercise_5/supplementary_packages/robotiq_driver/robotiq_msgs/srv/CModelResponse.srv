@@ -1,0 +1,21 @@
+## Configuration is separated into ePick and Robotiq Grippers
+# Robotiq 2f = 1    ePick = 2
+uint8 configuration
+
+## Robotiq 2finger type
+# Robotiq 85 = 85, Robotiq 140 = 140
+uint8 robotiq2f_type
+
+## Robotiq Generic Variables
+# rpr: Object width (<= 140), rsp: Speed (255 max), rfr: Force (255 max)
+uint8 rpr
+uint8 rsp
+uint8 rfr
+
+## ePick values
+uint8 rmod # Automatic mode = 0,  Advanced Mode = 1
+# uint8 ratr # Automatic vacuum release. Normal Operation = 0, Release = 1
+
+---
+# bool success
+bool obj_detected
